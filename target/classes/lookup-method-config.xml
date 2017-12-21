@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="clothingShop" class="com.shulpin.model.ClothingShop">
+        <lookup-method name="makeClothing" bean="clothing"/>
+        <lookup-method name="makeWomenClothing" bean="womenClothing"/>
+    </bean>
+
+    <bean id="clothing" class="com.shulpin.model.Clothing" scope="prototype"/>
+
+    <bean id="womenClothing" class="com.shulpin.model.Clothing" scope="prototype">
+        <property name="isWomen" value="true"/>
+    </bean>
+
+</beans>

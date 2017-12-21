@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="book" class="com.shulpin.model.Book">
+        <property name="name" value="Harry Potter"/>
+        <property name="author" ref="author"/>
+    </bean>
+
+    <bean id="author" class="com.shulpin.model.Author">
+        <property name="name" value="J. K. Rowling"/>
+    </bean>
+
+
+
+
+
+
+</beans>

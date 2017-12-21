@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="driver" class="com.shulpin.model.Driver" autowire="no">
+        <property name="license" ref="license"/>
+    </bean>
+
+    <bean id="license" class="com.shulpin.model.License" >
+        <property name="number" value="123456ABCD"/>
+    </bean>
+
+</beans>
